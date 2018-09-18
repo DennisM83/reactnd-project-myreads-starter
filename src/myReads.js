@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Search from './Search'
 import BookShelf from './BookShelf'
 class myReads extends Component {
@@ -16,7 +17,7 @@ class myReads extends Component {
                     </div>
                 </div>
                 <div className="open-search">
-                    <a href="#search" onClick={this.props.onNav/*() => this.setState({ showSearchPage: true })*/}>Add a book</a>
+                    <Link to="/search" /*onClick={this.props.onNav() => this.setState({ showSearchPage: true })}*/>Add a book</Link>
                 </div>
             </div>
         )
