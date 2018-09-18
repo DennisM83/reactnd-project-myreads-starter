@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Search from './Search'
 import BookShelf from './BookShelf'
 class myReads extends Component {
     render() {
@@ -15,7 +16,7 @@ class myReads extends Component {
                     </div>
                 </div>
                 <div className="open-search">
-                    <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+                    <a href="#search" onClick={this.props.onNav/*() => this.setState({ showSearchPage: true })*/}>Add a book</a>
                 </div>
             </div>
         )
