@@ -3,7 +3,6 @@ import Books from './Books'
 
 class BookShelf extends Component {
     render () {
-        console.log(this.props.bookList)
         return (
             <div className="bookshelf">
                 <h2 className="bookshelf-title">Currently Reading</h2>
@@ -14,6 +13,8 @@ class BookShelf extends Component {
                         (<li key={book.id}>
                             <Books
                                 book={book}
+                                changeShelf={this.props.changeShelf}
+                                presentShelf='currentlyReading'
                             />
                         </li>))}
                     </ol>
@@ -26,6 +27,8 @@ class BookShelf extends Component {
                             (<li key={book.id}>
                                 <Books
                                     book={book}
+                                    changeShelf={this.props.changeShelf}
+                                    presentShelf='wantToRead'
                                 />
                             </li>))}
                     </ol>
@@ -38,6 +41,8 @@ class BookShelf extends Component {
                             (<li key={book.id}>
                                 <Books
                                     book={book}
+                                    changeShelf={this.props.changeShelf}
+                                    presentShelf='read'
                                 />
                             </li>))}
                     </ol>
