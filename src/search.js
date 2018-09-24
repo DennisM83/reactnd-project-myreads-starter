@@ -49,13 +49,16 @@ class Search extends Component {
             </div>
             <div className="search-books-results">
               <ol className="books-grid">
-                  {this.state.rummageBooks.map(rummageBooks => (
-                    <li key={rummageBooks.id}>
-                      <Books 
-                        book={rummageBooks}
-                      />
-                    </li>
-                  ))}
+                  {this.state.rummageBooks.map(rummageBooks => {
+                    return (
+                        <li key={rummageBooks.id}>
+                          <Books
+                            book={rummageBooks}
+                          />
+                        </li>
+                      );
+                    }) 
+                  }
               </ol>
             </div>
           </div>
