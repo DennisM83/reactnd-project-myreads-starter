@@ -50,10 +50,21 @@ class Search extends Component {
             <div className="search-books-results">
               <ol className="books-grid">
                   {this.state.rummageBooks.map(rummageBooks => {
+                    let defaultShelf = "none";
+
+                    this.props.booklist.map(book => (
+                      book.id === rummageBooks.id ? 
+                      defaultShelf = book.shelf
+                      :
+                      ''
+                    )); 
+
                     return (
                         <li key={rummageBooks.id}>
                           <Books
                             book={rummageBooks}
+                            presentShelf={defaultShelf}
+                            changeShelf={this.props.changeShelf}
                           />
                         </li>
                       );
