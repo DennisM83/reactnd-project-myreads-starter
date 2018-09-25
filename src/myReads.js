@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-class myReads extends Component {
+class MyReads extends Component {
     render() {
         return (
             <div>
@@ -18,4 +18,4 @@ class myReads extends Component {
     }
 }
 
-export default myReads;
+export default MyReads;
